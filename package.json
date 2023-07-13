@@ -1,0 +1,40 @@
+{
+  "name": "caseymurtaugh-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "image-meta": "node utils/extract-image-metadata.ts"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@types/node": "^20.4.1",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@vercel/og": "^0.5.8",
+    "eslint": "^8.44.0",
+    "eslint-config-next": "^13.4.9",
+    "framer-motion": "^10.0.0",
+    "image-size": "^1.0.2",
+    "next": "^13.4.9",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
+    "react-masonry-css": "^1.0.16",
+    "react-pdf": "6.2.2",
+    "typescript": "^5.1.6",
+    "yet-another-react-lightbox": "^2.4.3"
+  },
+  "devDependencies": {
+    "@types/react-pdf": "6.2.0",
+    "autoprefixer": "^10.4.13",
+    "eslint-config-prettier": "^8.6.0",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
+  }
+}
