@@ -5,6 +5,8 @@ import React, { useEffect, useState } from "react";
 import { motion, useScroll } from "framer-motion";
 
 import { IoIosMenu } from "react-icons/io";
+import SocialMediaIcons from "./SocialMediaIcons";
+import { usePathname } from "next/navigation";
 
 interface NavProps {
   links: {
@@ -16,11 +18,22 @@ interface NavProps {
 const Nav: React.FC<NavProps> = ({ links }) => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const { scrollYProgress } = useScroll();
+  const pathname = usePathname();
+
+  const textVariants = {
+    start: {
+      color: ["/", "/about"].includes(pathname || "") ? "white" : "black",
+    },
+    end: {
+      color: "white",
+    },
+  };
 
   const toggleMobileNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
   };
   const [opacity, setOpacity] = useState(0);
+
   useEffect(() => {
     scrollYProgress.on("change", (v) => {
       setOpacity(Math.ceil(v));
@@ -45,35 +58,59 @@ const Nav: React.FC<NavProps> = ({ links }) => {
     <div className="fixed top-0 z-20 w-full">
       <div className="container">
         <motion.div
-          className={`absolute inset-0 bg-white ${
-            opacity > 0 ? "shadow-lg" : ""
-          }`}
+          className="absolute inset-0 bg-black"
           initial={{ opacity: 0 }}
-          animate={{ opacity: opacity }}
+          animate={{ opacity: opacity - 0.1 }}
           transition={{
-            duration: 0.2,
+            duration: 0.5,
           }}
         ></motion.div>
         <nav
-          className={`flex justify-between items-center py-3 md:py-5 shadow-sm w-full`}
+          className={`flex justify-between items-center py-3 lg:py-5 shadow-sm w-full`}
         >
+          {/* Desktop nav */}
           <div className={`flex items-center opacity-100 z-30`}>
-            <a href="/" className={`text-lg font-semibold uppercase`}>
-              <span className="">Casey Murtaugh</span>
-            </a>
+            <motion.a
+              variants={textVariants}
+              animate={opacity > 0 ? "end" : "start"}
+              transition={{
+                duration: 0.5,
+              }}
+              href="/"
+              className={`text-lg font-semibold uppercase ${
+                isMobileNavOpen && "hidden"
+              }`}
+            >
+              <span className="hidden lg:block">My Website</span>
+              <span className="lg:hidden">MW</span>
+            </motion.a>
           </div>
-          <div className={`hidden md:flex uppercase opacity-100 z-30`}>
+          <div className={`hidden lg:flex uppercase opacity-100 z-30`}>
             {links.map((link) => (
-              <a key={link.label} href={link.href} className={`mx-4 text-sm`}>
+              <motion.a
+                variants={textVariants}
+                animate={opacity > 0 ? "end" : "start"}
+                transition={{
+                  duration: 0.5,
+                }}
+                key={link.label}
+                href={link.href}
+                className={`mx-4 text-sm`}
+              >
                 {link.label}
-              </a>
+              </motion.a>
             ))}
           </div>
           {/* Mobile menu button */}
-          <div className={`md:hidden flex items-center z-20`}>
-            <button
+          <div className={`lg:hidden flex items-center z-20`}>
+            <motion.button
+              variants={textVariants}
+              animate={opacity > 0 ? "end" : "start"}
+              transition={{
+                duration: 0.5,
+              }}
               type="button"
-              className={` focus:outline-none`}
+              className={`focus:outline-none`}
               onClick={toggleMobileNav}
             >
               {isMobileNavOpen ? (
@@ -81,26 +118,29 @@ const Nav: React.FC<NavProps> = ({ links }) => {
               ) : (
                 <IoIosMenu size={40} />
               )}
-            </button>
+            </motion.button>
           </div>
           {isMobileNavOpen && (
             <motion.div
-              className={`md:hidden fixed inset-0 bg-white z-10 h-screen`}
+              className={`lg:hidden fixed inset-0 bg-black z-10 h-screen`}
               initial="closed"
               animate="open"
               variants={navVariants}
             >
-              <div className="mt-20">
+              <div className="container mt-20">
                 {links.map((link) => (
                   <a
                     key={link.label}
                     href={link.href}
-                    className={`block text-3xl py-2 px-4`}
+                    className={`block text-3xl py-2 text-white hover:text-gray-200`}
                     onClick={toggleMobileNav}
                   >
                     {link.label}
                   </a>
                 ))}
+                <div className="mt-20">
+                  <SocialMediaIcons />
+                </div>
               </div>
             </motion.div>
           )}

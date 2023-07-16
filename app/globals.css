@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  /*font-size: 21px;*/
+  /* font-size: 21px; */
 }
 
 @layer base {
@@ -12,25 +12,14 @@ html {
   h3,
   h4,
   h5 {
+    @apply font-medium uppercase;
   }
 
-  p {
-    @apply mb-4;
-  }
-
-  .homepage-subtitle {
-    @apply text-2xl font-semibold text-center md:text-left;
-  }
-
-  /* .page-title {
-    @apply p-3 mb-3 text-sm tracking-widest text-center text-gray-300 uppercase bg-gray-900 lg:text-base lg:p-5 lg:mb-8;
-  } */
-
-  .page-title {
-    @apply text-8xl md:text-[128px] uppercase py-8 text-center;
+  .banner-headline {
+    @apply font-semibold text-center text-5xl md:text-8xl lg:text-[128px] leading-none pb-3;
   }
 
   .section {
-    @apply max-w-4xl py-8 mx-auto;
+    @apply max-w-3xl py-8 mx-auto;
   }
 }

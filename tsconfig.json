@@ -37,7 +37,6 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "utils/extract-image-metadata.ts"
+    "node_modules"
   ]
 }

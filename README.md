@@ -1,19 +1,23 @@
-# Caseymurtaugh.art
+# nextjs-typescript-tailwind-boilerplate
 
-This is a NextJS app for https://caseymurtaugh.art
+Baseline starter project files for a NextJS (server components) React application which uses TypeScript and TailwindCSS. Intended to be a helpful starting point.
 
-## Masonry Galleries
+## Includes
 
-This creates automated Masonry style Lightbox image galleries from a directory of images (and optional `manifest.ts` file providing more info to plug into the Lightbox display). It outputs the gallery as optimized `next/image` components.
+- Using [Next13](https://nextjs.org/) `/app` directory and Server components by default
+- Typescript
+- [TailwindCSS](https://tailwindcss.com/)
+- ESLint via Prettier
+- Google Analytics (UA) example
+- OpenGraph dynamic image setup using [Vercel's OG package](https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation)
+- Masonry photo gallery w/ Lightbox support
+- Parallax Hero components (Video and Image)
+- [Framer Motion](https://www.framer.com/motion/) support
 
-To automate this process, we need to pull image metadata from images (dimensions). There's a helper script to do this:
+## Getting Started
 
-```bash
-npm run image-meta [PAGE_COMPONENT_DIRECTORY] [SOURCE_DIRECTORY]
-```
+Clone the app and run `npm i`
 
-This will generate a JSON file `images-meta.json` which will live in the `[PAGE_COMPONENT_DIRECTORY]` folder and which the component will use to grab images. This is a bit of a workaround, as running this script at build time (processing a lot of images) overloads the AWS lambda limit > 50MB, and the Vercel build fails.
+Update the `package.json` file to the new site info
 
-## CV
-
-Note for the PDF CV to render, `react-pdf` must be pinned to version `v6.2.2`.
+Update the config file `nttb-config.ts`

@@ -1,44 +1,27 @@
 import "./globals.css";
 
-import Footer from "@/components/Footer";
-import { Metadata } from "next";
-import { Staatliches } from "next/font/google";
-import NavTailwind from "@/components/NavTailwind";
-import Script from "next/script";
+import { config, nav } from "nttb-config";
 
-const customFont = Staatliches({
-  weight: "400",
+import Footer from "@/components/Footer";
+import { Libre_Franklin } from "next/font/google";
+import { Metadata } from "next";
+import Nav from "@/components/Nav";
+import Script from "next/script";
+import { SITE_CONFIG } from "site-config";
+
+const { OPEN_GRAPH, SITE } = config;
+
+const libreFranklin = Libre_Franklin({
   subsets: ["latin"],
-  variable: "--font-custom-font",
+  variable: "--font-libreFranklin",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://keithscottblues.com"),
-  alternates: {
-    canonical: "/",
-    languages: {
-      "en-US": "/en-US",
-    },
-  },
+  description: SITE.description,
+  openGraph: OPEN_GRAPH,
   title: {
-    default: "Keith Scott Blues",
-    template: "%s | Keith Scott Blues",
-  },
-  description: "Description goes here",
-  openGraph: {
-    title: "Keith Scott - This and that",
-    description: "Showcasing the ..",
-    url: "https://keithscottblues.com/",
-    siteName: "Keith Scott Blues",
-    images: [
-      {
-        url: `${
-          process.env.NEXT_PUBLIC_BASE_URL
-        }/api/og?cover=${encodeURIComponent("/images/IMG_9823.jpg")}`,
-      },
-    ],
-    locale: "en-US",
-    type: "website",
+    default: SITE.title,
+    template: `%s | ${SITE.title}`,
   },
 };
 
@@ -50,13 +33,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={customFont.className}>
+    <html lang="en" className={libreFranklin.className}>
       <body>
-        <NavTailwind />
-        <div className="pt-4">
-          {children}
+        <div className="flex flex-col justify-between h-screen">
+          <Nav links={nav} />
+          <div className="">{children}</div>
           <Footer />
         </div>
+
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA}`}
         />
