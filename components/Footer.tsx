@@ -27,7 +27,9 @@ const Footer = () => {
   return (
     <footer className="text-white bg-black">
       <div className="container flex flex-col items-center justify-center py-8 text-sm md:justify-between md:flex-row ">
-        <div className="pb-3 md:pb-0">&copy; Website name</div>
+        <div className="pb-3 tracking-wide uppercase md:pb-0">
+          &copy; Keith Scott Blues
+        </div>
         <SocialMediaIcons />
       </div>
     </footer>
