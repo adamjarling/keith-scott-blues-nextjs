@@ -3,13 +3,12 @@
 import Banner from "@/components/banner/Banner";
 import BannerHeadline from "@/components/banner/Headline";
 import Button from "@/components/Button";
-import HeroImage from "@/components/Hero";
 import Main from "@/components/Main";
 import ParallaxHero from "@/components/ParallaxHero";
 import { motion } from "framer-motion";
 import QuoteSlider from "@/components/QuoteSlider";
 import Link from "next/link";
-import TourDates from "@/components/TourDates";
+import TourDatesMinimal from "@/components/TourDatesMinimal";
 import useTourDates from "@/hooks/use-tour-dates";
 import oneNation from "../public/images/one-nation-under-the-blues_cover-3000px.jpg";
 import Image from "next/image";
@@ -88,7 +87,7 @@ export default function Home() {
               <h3 className="mb-3 text-2xl font-semibold uppercase">
                 Tour Dates
               </h3>
-              <TourDates tourDates={tourDates.slice(0, 2)} />
+              <TourDatesMinimal tourDates={tourDates.slice(0, 2)} />
               <Link href="/tour" className="button">
                 View All Dates
               </Link>

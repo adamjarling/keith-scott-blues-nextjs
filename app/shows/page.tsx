@@ -3,6 +3,7 @@ import BannerHeadline from "@/components/banner/Headline";
 import Image from "next/image";
 import Main from "@/components/Main";
 import casey from "@/public/images/IMG_0221.jpg";
+import TourDatesList from "@/components/TourDatesList";
 
 const showDates = [
   {
@@ -36,25 +37,7 @@ const Shows = () => {
       </Banner>
 
       <section className="container">
-        <ul className="mb-10">
-          {showDates.map((show) => (
-            <li
-              key={show.date}
-              className="flex items-center justify-between w-full py-6 border-b border-gray-200"
-            >
-              <div className="flex flex-col w-1/2 md:w-2/3 lg:w-3/4 md:flex-row">
-                <h3>{show.date}</h3>
-                <div className="flex flex-col lg:flex-row md:pl-10">
-                  <div>
-                    {show.venue} @ {show.time}
-                  </div>
-                  <div className="lg:pl-16">{show.location}</div>
-                </div>
-              </div>
-              <div className="">RSVP</div>
-            </li>
-          ))}
-        </ul>
+        <TourDatesList />
       </section>
     </Main>
   );
