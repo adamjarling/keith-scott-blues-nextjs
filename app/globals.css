@@ -15,6 +15,10 @@ html {
     @apply font-medium uppercase;
   }
 
+  p {
+    @apply pb-3 leading-relaxed;
+  }
+
   main a {
     @apply text-green-700 border-b border-green-700 border-dashed;
   }

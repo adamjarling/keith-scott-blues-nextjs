@@ -3,15 +3,15 @@
 import Banner from "@/components/banner/Banner";
 import BannerHeadline from "@/components/banner/Headline";
 import Button from "@/components/Button";
+import Image from "next/image";
+import Link from "next/link";
 import Main from "@/components/Main";
 import ParallaxHero from "@/components/ParallaxHero";
-import { motion } from "framer-motion";
 import QuoteSlider from "@/components/QuoteSlider";
-import Link from "next/link";
 import TourDatesMinimal from "@/components/TourDatesMinimal";
-import useTourDates from "@/hooks/use-tour-dates";
+import { motion } from "framer-motion";
 import oneNation from "../public/images/one-nation-under-the-blues_cover-3000px.jpg";
-import Image from "next/image";
+import useTourDates from "@/hooks/use-tour-dates";
 
 const videos = [
   {
@@ -32,6 +32,17 @@ const videos = [
   },
 ];
 
+const bluesSocieties = [
+  {
+    name: "Washington Blues Society",
+    link: "https://wablues.org/",
+  },
+  {
+    name: "Memphis Blues Society",
+    link: "https://www.memphisbluessociety.com/",
+  },
+];
+
 export default function Home() {
   const tourDates = useTourDates();
 
@@ -45,10 +56,10 @@ export default function Home() {
           // subHeadline="Some random subheadline content can go here to describe something"
           // Button={<Button cb={() => console.log("yo")}>Get Started</Button>}
         /> */}
-        <Banner className="">
+        <Banner>
           <Image src={oneNation} alt="Album Cover" className="mb-10" />
           <BannerHeadline>New Album Out Now</BannerHeadline>
-          <p>
+          <p className="px-3">
             Pick up the latest release by Keith Scott and the Electric Blues
             Junkies
           </p>
@@ -80,18 +91,35 @@ export default function Home() {
           </div>
         </Banner>
 
+        <section className="max-w-4xl py-20 mx-3 mx-auto">
+          <QuoteSlider />
+        </section>
+
         <section className="container">
-          <div className="grid grid-cols-1 gap-6 py-10 md:grid-cols-2">
-            <QuoteSlider />
-            <div>
-              <h3 className="mb-3 text-2xl font-semibold uppercase">
-                Tour Dates
-              </h3>
-              <TourDatesMinimal tourDates={tourDates.slice(0, 2)} />
-              <Link href="/tour" className="button">
-                View All Dates
-              </Link>
+          <div className="flex flex-col items-center justify-center w-full">
+            <BannerHeadline>Tour</BannerHeadline>
+            <div className="pt-10 pb-5">
+              <TourDatesMinimal tourDates={tourDates.slice(0, 3)} />
             </div>
+
+            <Button classes="mb-10" cb={() => console.log("yo")}>
+              View All Tour Dates
+            </Button>
+          </div>
+        </section>
+
+        <section className="py-10 text-white bg-black">
+          <BannerHeadline>Blues Societies</BannerHeadline>
+          <div className="grid grid-cols-1 gap-5 py-5 text-center lg:grid-cols-2">
+            {bluesSocieties.map((bs) => (
+              <Link
+                href={bs.link}
+                key={bs.name}
+                className="text-2xl text-white uppercase border-none"
+              >
+                {bs.name}
+              </Link>
+            ))}
           </div>
         </section>
       </Main>
