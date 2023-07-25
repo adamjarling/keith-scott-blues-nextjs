@@ -2,7 +2,7 @@ import Banner from "@/components/banner/Banner";
 import BannerHeadline from "@/components/banner/Headline";
 import Image from "next/image";
 import Main from "@/components/Main";
-import casey from "@/public/images/IMG_0221.jpg";
+import ParallaxHero from "@/components/ParallaxHero";
 import TourDatesList from "@/components/TourDatesList";
 
 const showDates = [
@@ -31,7 +31,11 @@ const showDates = [
 
 const Shows = () => {
   return (
-    <Main>
+    <Main flushTop>
+      <ParallaxHero
+        altText="Some alt text"
+        imageUrl={`/images/FB_IMG_1508931280861.jpg`}
+      />
       <Banner className="md:py-20">
         <BannerHeadline>Shows</BannerHeadline>
       </Banner>

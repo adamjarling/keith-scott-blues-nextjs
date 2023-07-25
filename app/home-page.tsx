@@ -48,7 +48,7 @@ export default function Home() {
 
   return (
     <>
-      <Main flushTop>
+      <Main>
         <Banner>
           <Image src={oneNation} alt="Album Cover" className="mb-10" />
           <BannerHeadline>New Album Out Now</BannerHeadline>
@@ -56,7 +56,6 @@ export default function Home() {
             Pick up the latest release by Keith Scott and the Electric Blues
             Junkies
           </p>
-
           <Button classes="mt-6" cb={() => console.log("yo")}>
             Buy Now
           </Button>

@@ -52,13 +52,13 @@ const About = () => {
         </p>
 
         <blockquote>
-          &quote;He was very cordial,&quote; Scott says of the elder statesman.
-          &quote;Then, I met his whole band and partied with them — guys like
-          Matt Murphy and Lovie Lee, Ray Allison, all those guys. I didn&quot;t
-          think I&quot;d be in a band until I met Muddy Waters and his band.
-          Then I said, &quot;I want to be in a blues band.&quot; They were just
-          so stately and well-dressed, and they took their music so seriously.
-          They seemed like they were gentlemen and they loved what they did.”
+          &quotHe was very cordial,&quot; Scott says of the elder statesman.
+          &quotThen, I met his whole band and partied with them — guys like Matt
+          Murphy and Lovie Lee, Ray Allison, all those guys. I didn&quot;t think
+          I&quot;d be in a band until I met Muddy Waters and his band. Then I
+          said, &quot;I want to be in a blues band.&quot; They were just so
+          stately and well-dressed, and they took their music so seriously. They
+          seemed like they were gentlemen and they loved what they did.”
         </blockquote>
 
         <p>
@@ -67,10 +67,10 @@ const About = () => {
         </p>
 
         <blockquote>
-          &quote;I got to spend some time at Bo Diddley&quot;s house in
+          &quotI got to spend some time at Bo Diddley&quot;s house in
           Gainesville, Fla. That time, too, my friend was his bass player. Bo
           was awesome, totally the coolest guy. He cooked, he had a barbeque and
-          I remember he had a lot of dogs,&quote; Scott says.
+          I remember he had a lot of dogs,&quot; Scott says.
         </blockquote>
 
         <p>
@@ -80,8 +80,8 @@ const About = () => {
         </p>
 
         <blockquote>
-          &quote;I thought I would learn to play blues, but I didn&quot;t really
-          think I&quot;d get this proficient at it,&quote; Scott says.
+          &quotI thought I would learn to play blues, but I didn&quot;t really
+          think I&quot;d get this proficient at it,&quot; Scott says.
         </blockquote>
 
         <p>
@@ -91,8 +91,8 @@ const About = () => {
         </p>
 
         <blockquote>
-          &quote;My friend said, &quot;We&quot;ll move to Chicago, put a blues
-          band together, play that scene and meet everybody,&quote; Scott
+          &quotMy friend said, &quot;We&quot;ll move to Chicago, put a blues
+          band together, play that scene and meet everybody,&quot; Scott
           recalls.
         </blockquote>
 
@@ -105,11 +105,10 @@ const About = () => {
         </p>
 
         <blockquote>
-          &quote;It was pretty incredible,&quote; he says. &quote;After I got
-          there, the next thing I know I am at the Checkerboard Lounge and Buddy
-          Guy was there, just hanging around. Junior Wells was there and
-          everybody was real friendly — and it wasn&quot;t commercialized at
-          all.&quote;
+          &quotIt was pretty incredible,&quot; he says. &quotAfter I got there,
+          the next thing I know I am at the Checkerboard Lounge and Buddy Guy
+          was there, just hanging around. Junior Wells was there and everybody
+          was real friendly — and it wasn&quot;t commercialized at all.&quot;
         </blockquote>
 
         <p>
@@ -118,19 +117,19 @@ const About = () => {
           Side, Scott&quot;s indoctrination into Windy City music progressed at
           lightning speed, with him meeting and playing behind legends such as
           Johnny Littlejohn, B.B. Odom, Eddie Taylor and Little Milton. These
-          older gentlemen, Scott says, taught him the importance of &quote;just
-          lying back and being a good accompaniest&quote; while serving as a
+          older gentlemen, Scott says, taught him the importance of &quotjust
+          lying back and being a good accompaniest&quot; while serving as a
           backing musician. He recalls, also, he learned some practical lessons
           about dealing with the unpleasant, rougher edges of the Chicago blues
           world.
         </p>
 
         <blockquote>
-          &quote;I played my first gig with Bill Warren, who drummed on Junior
-          Wells&quot; &quot;Hoodoo Man Blues&quote; album,&quote; Scott recalls.
-          &quote;He offered $30 for the gig. At the end of the night he gave
-          each guy in the band $5. I said, &quot;Where&quot;s my $30?&quot; He
-          said, &quot;I meant it&quot;s $30 for the band!’
+          &quotI played my first gig with Bill Warren, who drummed on Junior
+          Wells&quot; &quot;Hoodoo Man Blues&quot; album,&quot; Scott recalls.
+          &quotHe offered $30 for the gig. At the end of the night he gave each
+          guy in the band $5. I said, &quot;Where&quot;s my $30?&quot; He said,
+          &quot;I meant it&quot;s $30 for the band!’
         </blockquote>
 
         <p>
@@ -147,10 +146,10 @@ const About = () => {
         </p>
 
         <blockquote>
-          &quote;My fondest memories of playing with Jimmy are some of the crazy
+          &quotMy fondest memories of playing with Jimmy are some of the crazy
           times in the van at night, driving through Canada and when Robert
           Plant came to watch us play at B.L.U.E.S. That night with Robert Plant
-          was a highlight. He hung out with us,&quote; Scott says. For Scott,
+          was a highlight. He hung out with us,&quot; Scott says. For Scott,
           having Plant in the audience symbolized his life had perhaps come full
           circle — there was his boyhood rock idol, standing in one of
           Chicago&quot;s premier blues clubs, watching him play the music.
@@ -161,16 +160,16 @@ const About = () => {
           Scott&quot;s reputation as a reliable, controlled and soulful
           guitar-slinger grew, Scott ventured out on his own, performing a loud
           and funky brand of music he perfected, labeled and plays to this day
-          called &quote;heavy blues.&quote;
+          called &quotheavy blues.&quot;
         </p>
 
         <p>
-          Scott has seven solo CDs to his credit, among these, &quote;Heavy
-          Blues,&quote; &quote;World Blues&quote; and &quote;Universal
-          Blues.&quote; His &quote;Tennessee Blues,&quote; released in Fall of
-          2011, has been reviewed favorably by Living Blues, the world&quot;s
-          premier blues magazine. He was also reunited onstage with Dawkins at
-          the 2010 Chicago Blues Festival in front of a crowd of thousands.
+          Scott has seven solo CDs to his credit, among these, &quotHeavy
+          Blues,&quot; &quotWorld Blues&quot; and &quotUniversal Blues.&quot;
+          His &quotTennessee Blues,&quot; released in Fall of 2011, has been
+          reviewed favorably by Living Blues, the world&quot;s premier blues
+          magazine. He was also reunited onstage with Dawkins at the 2010
+          Chicago Blues Festival in front of a crowd of thousands.
         </p>
 
         <p>
@@ -184,11 +183,11 @@ const About = () => {
         </p>
 
         <blockquote>
-          &quote;I guess it&quot;s the lifestyle I enjoy,&quote; he says of his
-          hectic, itinerant way of living. &quote;I get to meet new people,
-          create a new progression in my career. I wait for the phone to ring —
-          today it did. Whether it&quot;s the House of Blues or a small tavern,
-          it&quot;s still what I love to do.&quote;
+          &quotI guess it&quot;s the lifestyle I enjoy,&quot; he says of his
+          hectic, itinerant way of living. &quotI get to meet new people, create
+          a new progression in my career. I wait for the phone to ring — today
+          it did. Whether it&quot;s the House of Blues or a small tavern,
+          it&quot;s still what I love to do.&quot;
         </blockquote>
       </section>
     </Main>
