@@ -1,5 +1,6 @@
 import MasonryGallery, { MasonryImage } from "@/components/Masonry";
 
+import Banner from "@/components/banner/Banner";
 import BannerHeadline from "@/components/banner/Headline";
 import Main from "@/components/Main";
 import { promises as fs } from "fs";
@@ -8,7 +9,7 @@ import path from "path";
 
 const sizeOf = require("image-size");
 
-const folder = "photos";
+const folder = "art";
 
 const GalleryPage = async () => {
   // Get filenames from a directory
@@ -27,11 +28,14 @@ const GalleryPage = async () => {
 
   return (
     <Main>
-      <section className="max-w-3xl py-8 mx-auto text-center">
+      <Banner>
         <BannerHeadline>Artwork</BannerHeadline>
-      </section>
-      <p className="text-center">Coming soon...</p>
-      {/* {images && <MasonryGallery images={images} />} */}
+      </Banner>
+      <p className="pb-5 text-center">
+        Hand drawn sketches by Keith Scott. Inspired by blues and fishing.
+      </p>
+
+      {images && <MasonryGallery images={images} manifest={manifest} />}
     </Main>
   );
 };
