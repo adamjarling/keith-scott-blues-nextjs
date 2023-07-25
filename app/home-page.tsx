@@ -11,6 +11,7 @@ import QuoteSlider from "@/components/QuoteSlider";
 import TourDatesMinimal from "@/components/TourDatesMinimal";
 import { motion } from "framer-motion";
 import oneNation from "../public/images/one-nation-under-the-blues_cover-3000px.jpg";
+import { useRouter } from "next/navigation";
 import useTourDates from "@/hooks/use-tour-dates";
 
 const videos = [
@@ -36,15 +37,18 @@ const bluesSocieties = [
   {
     name: "Washington Blues Society",
     link: "https://wablues.org/",
+    logo: "",
   },
   {
     name: "Memphis Blues Society",
     link: "https://www.memphisbluessociety.com/",
+    logo: "",
   },
 ];
 
 export default function Home() {
   const tourDates = useTourDates();
+  const router = useRouter();
 
   return (
     <>
@@ -56,8 +60,15 @@ export default function Home() {
             Pick up the latest release by Keith Scott and the Electric Blues
             Junkies
           </p>
-          <Button classes="mt-6" cb={() => console.log("yo")}>
-            Buy Now
+          <Button
+            classes="mt-6"
+            cb={() =>
+              router.push(
+                "https://open.spotify.com/artist/6sBKh9xJYT905Ps9l2JMZR"
+              )
+            }
+          >
+            Listen Now
           </Button>
         </Banner>
 
@@ -94,7 +105,7 @@ export default function Home() {
               <TourDatesMinimal tourDates={tourDates.slice(0, 3)} />
             </div>
 
-            <Button classes="mb-10" cb={() => console.log("yo")}>
+            <Button classes="mb-10" cb={() => router.push("/shows")}>
               View All Tour Dates
             </Button>
           </div>

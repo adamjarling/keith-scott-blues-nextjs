@@ -34,7 +34,7 @@ const Shows = () => {
     <Main flushTop>
       <ParallaxHero
         altText="Some alt text"
-        imageUrl={`/images/FB_IMG_1508931280861.jpg`}
+        imageUrl={`/photos/salmon-roots-blues-2017.jpg`}
       />
       <Banner className="md:py-20">
         <BannerHeadline>Shows</BannerHeadline>

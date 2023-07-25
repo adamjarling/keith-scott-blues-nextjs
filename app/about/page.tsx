@@ -9,7 +9,7 @@ const About = () => {
     <Main flushTop={true}>
       <ParallaxHero
         altText="Some alt text"
-        imageUrl={`/images/keith-test.png`}
+        imageUrl={`/images/album-world-blues-society_no-logo.jpg`}
       />
       <Banner>
         <BannerHeadline>About</BannerHeadline>

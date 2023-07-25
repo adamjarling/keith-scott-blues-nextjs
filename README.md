@@ -1,4 +1,4 @@
-# nextjs-typescript-tailwind-boilerplate
+# Keith Scott Blues
 
 Baseline starter project files for a NextJS (server components) React application which uses TypeScript and TailwindCSS. Intended to be a helpful starting point.
 

@@ -64,7 +64,7 @@ const socialMedia = {
   },
   spotify: {
     handle: "",
-    url: "https://open.spotify.com/artist/6sBKh9xJYT905Ps9l2JMZR?si=266S-h_VSwSmnP__IpptoQ",
+    url: "https://open.spotify.com/artist/6sBKh9xJYT905Ps9l2JMZR",
   },
   youTube: {
     handle: "keithscottblues",

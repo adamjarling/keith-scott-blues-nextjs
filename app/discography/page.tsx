@@ -10,7 +10,7 @@ const Discography = () => {
     <Main flushTop={true}>
       <ParallaxHero
         altText="Some alt text"
-        imageUrl={`/images/keith-test.png`}
+        imageUrl={`/images/keith-bw_onutb-cover-bg.png`}
       />
       <Banner>
         <BannerHeadline>Discography</BannerHeadline>
