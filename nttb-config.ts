@@ -35,6 +35,18 @@ const nav = [
     href: "/shows",
     label: "Shows",
   },
+  {
+    href: "/discography",
+    label: "Discography",
+  },
+  {
+    href: "/photos",
+    label: "Photos",
+  },
+  {
+    href: "/art",
+    label: "Art",
+  },
 ];
 
 const socialMedia = {

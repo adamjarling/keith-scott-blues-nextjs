@@ -1,12 +1,14 @@
 import MasonryGallery, { MasonryImage } from "@/components/Masonry";
 
+import BannerHeadline from "@/components/banner/Headline";
 import Main from "@/components/Main";
 import { promises as fs } from "fs";
+import { manifest } from "./manifest";
 import path from "path";
 
 const sizeOf = require("image-size");
 
-const folder = "masonry-images";
+const folder = "photos";
 
 const GalleryPage = async () => {
   // Get filenames from a directory
@@ -26,9 +28,10 @@ const GalleryPage = async () => {
   return (
     <Main>
       <section className="max-w-3xl py-8 mx-auto text-center">
-        Something goes here
+        <BannerHeadline>Artwork</BannerHeadline>
       </section>
-      {images && <MasonryGallery dir={folder} images={images} />}
+      <p className="text-center">Coming soon...</p>
+      {/* {images && <MasonryGallery images={images} />} */}
     </Main>
   );
 };

@@ -21,7 +21,6 @@ export type MasonryImage = {
 };
 
 interface Props {
-  dir: string;
   images: MasonryImage[];
   manifest?: {
     [key: string]: {
@@ -41,7 +40,7 @@ function getInfo(src: string, manifest: any) {
   return info || "";
 }
 
-const MasonryGallery: React.FC<Props> = ({ dir, images = [], manifest }) => {
+const MasonryGallery: React.FC<Props> = ({ images = [], manifest }) => {
   const [photoIndex, setPhotoIndex] = useState(-1);
 
   const handleImageClick = (index: number) => {

@@ -49,13 +49,6 @@ export default function Home() {
   return (
     <>
       <Main flushTop>
-        {/* <ParallaxHero
-          imageUrl="/images/keith-bw_onutb-cover-bg.png"
-          // headline="Keith Scott and the Electric Blues Junkies"
-          altText="Yo Mama"
-          // subHeadline="Some random subheadline content can go here to describe something"
-          // Button={<Button cb={() => console.log("yo")}>Get Started</Button>}
-        /> */}
         <Banner>
           <Image src={oneNation} alt="Album Cover" className="mb-10" />
           <BannerHeadline>New Album Out Now</BannerHeadline>
