@@ -15,7 +15,9 @@ const Discography = () => {
         <BannerHeadline>Discography</BannerHeadline>
       </Banner>
 
-      <section className="container mb-10"></section>
+      <section className="container mb-10">
+        <p className="text-center">Coming soon...</p>
+      </section>
     </Main>
   );
 };

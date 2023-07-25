@@ -22,7 +22,9 @@ const Nav: React.FC<NavProps> = ({ links }) => {
 
   const textVariants = {
     start: {
-      color: ["/about"].includes(pathname || "") ? "white" : "black",
+      color: ["/about", "/discography"].includes(pathname || "")
+        ? "white"
+        : "black",
     },
     end: {
       color: "white",

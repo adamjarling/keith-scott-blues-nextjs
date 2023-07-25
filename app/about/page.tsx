@@ -2,12 +2,15 @@ import Banner from "@/components/banner/Banner";
 import BannerHeadline from "@/components/banner/Headline";
 import Image from "next/image";
 import Main from "@/components/Main";
-import ParallaxVideo from "@/components/ParallaxVideo";
+import ParallaxHero from "@/components/ParallaxHero";
 
 const About = () => {
   return (
     <Main flushTop={true}>
-      <ParallaxVideo altText="Some alt text" videoUrl="/IMG_9825.mp4" />
+      <ParallaxHero
+        altText="Some alt text"
+        imageUrl={`/images/keith-test.png`}
+      />
       <Banner>
         <BannerHeadline>About</BannerHeadline>
       </Banner>
@@ -36,24 +39,26 @@ const About = () => {
         </p>
 
         <blockquote>
-          "I was totally blown away," Scott says of first hearing Waters, adding
-          he was lucky enough to meet this master of the Chicago blues in 1980
-          while living in Florida. "Meeting Muddy Waters really helped in
-          spurring my interest in playing blues. My musician friend opened for
-          Muddy on the campus of the University of Florida at Gainesville and he
-          invited me to come and hang out with him."
+          &quot;I was totally blown away,&quot; Scott says of first hearing
+          Waters, adding he was lucky enough to meet this master of the Chicago
+          blues in 1980 while living in Florida. &quot;Meeting Muddy Waters
+          really helped in spurring my interest in playing blues. My musician
+          friend opened for Muddy on the campus of the University of Florida at
+          Gainesville and he invited me to come and hang out with him.&quot;
         </blockquote>
 
-        <p>Scott remembers meeting Waters as being, "overwhelming."</p>
+        <p>
+          Scott remembers meeting Waters as being, &quot;overwhelming.&quot;
+        </p>
 
         <blockquote>
-          "He was very cordial," Scott says of the elder statesman. "Then, I met
-          his whole band and partied with them — guys like Matt Murphy and Lovie
-          Lee, Ray Allison, all those guys. I didn&quot;t think I&quot;d be in a
-          band until I met Muddy Waters and his band. Then I said, &quot;I want
-          to be in a blues band.&quot; They were just so stately and
-          well-dressed, and they took their music so seriously. They seemed like
-          they were gentlemen and they loved what they did.”
+          &quote;He was very cordial,&quote; Scott says of the elder statesman.
+          &quote;Then, I met his whole band and partied with them — guys like
+          Matt Murphy and Lovie Lee, Ray Allison, all those guys. I didn&quot;t
+          think I&quot;d be in a band until I met Muddy Waters and his band.
+          Then I said, &quot;I want to be in a blues band.&quot; They were just
+          so stately and well-dressed, and they took their music so seriously.
+          They seemed like they were gentlemen and they loved what they did.”
         </blockquote>
 
         <p>
@@ -62,10 +67,10 @@ const About = () => {
         </p>
 
         <blockquote>
-          "I got to spend some time at Bo Diddley&quot;s house in Gainesville,
-          Fla. That time, too, my friend was his bass player. Bo was awesome,
-          totally the coolest guy. He cooked, he had a barbeque and I remember
-          he had a lot of dogs," Scott says.
+          &quote;I got to spend some time at Bo Diddley&quot;s house in
+          Gainesville, Fla. That time, too, my friend was his bass player. Bo
+          was awesome, totally the coolest guy. He cooked, he had a barbeque and
+          I remember he had a lot of dogs,&quote; Scott says.
         </blockquote>
 
         <p>
@@ -75,8 +80,8 @@ const About = () => {
         </p>
 
         <blockquote>
-          "I thought I would learn to play blues, but I didn&quot;t really think
-          I&quot;d get this proficient at it," Scott says.
+          &quote;I thought I would learn to play blues, but I didn&quot;t really
+          think I&quot;d get this proficient at it,&quote; Scott says.
         </blockquote>
 
         <p>
@@ -86,8 +91,9 @@ const About = () => {
         </p>
 
         <blockquote>
-          "My friend said, &quot;We&quot;ll move to Chicago, put a blues band
-          together, play that scene and meet everybody," Scott recalls.
+          &quote;My friend said, &quot;We&quot;ll move to Chicago, put a blues
+          band together, play that scene and meet everybody,&quote; Scott
+          recalls.
         </blockquote>
 
         <p>
@@ -99,10 +105,11 @@ const About = () => {
         </p>
 
         <blockquote>
-          "It was pretty incredible," he says. "After I got there, the next
-          thing I know I am at the Checkerboard Lounge and Buddy Guy was there,
-          just hanging around. Junior Wells was there and everybody was real
-          friendly — and it wasn&quot;t commercialized at all."
+          &quote;It was pretty incredible,&quote; he says. &quote;After I got
+          there, the next thing I know I am at the Checkerboard Lounge and Buddy
+          Guy was there, just hanging around. Junior Wells was there and
+          everybody was real friendly — and it wasn&quot;t commercialized at
+          all.&quote;
         </blockquote>
 
         <p>
@@ -111,18 +118,19 @@ const About = () => {
           Side, Scott&quot;s indoctrination into Windy City music progressed at
           lightning speed, with him meeting and playing behind legends such as
           Johnny Littlejohn, B.B. Odom, Eddie Taylor and Little Milton. These
-          older gentlemen, Scott says, taught him the importance of "just lying
-          back and being a good accompaniest" while serving as a backing
-          musician. He recalls, also, he learned some practical lessons about
-          dealing with the unpleasant, rougher edges of the Chicago blues world.
+          older gentlemen, Scott says, taught him the importance of &quote;just
+          lying back and being a good accompaniest&quote; while serving as a
+          backing musician. He recalls, also, he learned some practical lessons
+          about dealing with the unpleasant, rougher edges of the Chicago blues
+          world.
         </p>
 
         <blockquote>
-          "I played my first gig with Bill Warren, who drummed on Junior
-          Wells&quot; &quot;Hoodoo Man Blues" album," Scott recalls. "He offered
-          $30 for the gig. At the end of the night he gave each guy in the band
-          $5. I said, &quot;Where&quot;s my $30?&quot; He said, &quot;I meant
-          it&quot;s $30 for the band!’
+          &quote;I played my first gig with Bill Warren, who drummed on Junior
+          Wells&quot; &quot;Hoodoo Man Blues&quote; album,&quote; Scott recalls.
+          &quote;He offered $30 for the gig. At the end of the night he gave
+          each guy in the band $5. I said, &quot;Where&quot;s my $30?&quot; He
+          said, &quot;I meant it&quot;s $30 for the band!’
         </blockquote>
 
         <p>
@@ -139,13 +147,13 @@ const About = () => {
         </p>
 
         <blockquote>
-          "My fondest memories of playing with Jimmy are some of the crazy times
-          in the van at night, driving through Canada and when Robert Plant came
-          to watch us play at B.L.U.E.S. That night with Robert Plant was a
-          highlight. He hung out with us," Scott says. For Scott, having Plant
-          in the audience symbolized his life had perhaps come full circle —
-          there was his boyhood rock idol, standing in one of Chicago&quot;s
-          premier blues clubs, watching him play the music.
+          &quote;My fondest memories of playing with Jimmy are some of the crazy
+          times in the van at night, driving through Canada and when Robert
+          Plant came to watch us play at B.L.U.E.S. That night with Robert Plant
+          was a highlight. He hung out with us,&quote; Scott says. For Scott,
+          having Plant in the audience symbolized his life had perhaps come full
+          circle — there was his boyhood rock idol, standing in one of
+          Chicago&quot;s premier blues clubs, watching him play the music.
         </blockquote>
 
         <p>
@@ -153,16 +161,16 @@ const About = () => {
           Scott&quot;s reputation as a reliable, controlled and soulful
           guitar-slinger grew, Scott ventured out on his own, performing a loud
           and funky brand of music he perfected, labeled and plays to this day
-          called "heavy blues."
+          called &quote;heavy blues.&quote;
         </p>
 
         <p>
-          Scott has seven solo CDs to his credit, among these, "Heavy Blues,"
-          "World Blues" and "Universal Blues." His "Tennessee Blues," released
-          in Fall of 2011, has been reviewed favorably by Living Blues, the
-          world&quot;s premier blues magazine. He was also reunited onstage with
-          Dawkins at the 2010 Chicago Blues Festival in front of a crowd of
-          thousands.
+          Scott has seven solo CDs to his credit, among these, &quote;Heavy
+          Blues,&quote; &quote;World Blues&quote; and &quote;Universal
+          Blues.&quote; His &quote;Tennessee Blues,&quote; released in Fall of
+          2011, has been reviewed favorably by Living Blues, the world&quot;s
+          premier blues magazine. He was also reunited onstage with Dawkins at
+          the 2010 Chicago Blues Festival in front of a crowd of thousands.
         </p>
 
         <p>
@@ -176,11 +184,11 @@ const About = () => {
         </p>
 
         <blockquote>
-          "I guess it&quot;s the lifestyle I enjoy," he says of his hectic,
-          itinerant way of living. "I get to meet new people, create a new
-          progression in my career. I wait for the phone to ring — today it did.
-          Whether it&quot;s the House of Blues or a small tavern, it&quot;s
-          still what I love to do.”
+          &quote;I guess it&quot;s the lifestyle I enjoy,&quote; he says of his
+          hectic, itinerant way of living. &quote;I get to meet new people,
+          create a new progression in my career. I wait for the phone to ring —
+          today it did. Whether it&quot;s the House of Blues or a small tavern,
+          it&quot;s still what I love to do.&quote;
         </blockquote>
       </section>
     </Main>

@@ -51,12 +51,12 @@ const nav = [
 
 const socialMedia = {
   instagram: {
-    handle: "",
-    url: "",
+    handle: "fishing_blues",
+    url: "https://www.instagram.com/fishing_blues/",
   },
   facebook: {
-    handle: "",
-    url: "",
+    handle: "keith.scott.5454",
+    url: "https://www.facebook.com/keith.scott.5454",
   },
   twitter: {
     handle: "",
@@ -64,11 +64,11 @@ const socialMedia = {
   },
   spotify: {
     handle: "",
-    url: "",
+    url: "https://open.spotify.com/artist/6sBKh9xJYT905Ps9l2JMZR?si=266S-h_VSwSmnP__IpptoQ",
   },
   youTube: {
-    handle: "",
-    url: "",
+    handle: "keithscottblues",
+    url: "https://www.youtube.com/@keithscottblues1167",
   },
 };
 
