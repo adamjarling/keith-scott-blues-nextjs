@@ -10,16 +10,19 @@ const sourceDirName = process.argv[3];
 async function doIt() {
   // Get filenames from a directory
   const imageDirectory = path.join(process.cwd(), `/public/${sourceDirName}`);
-  let imageFilenames = await fs.readdir(imageDirectory, (err, files) => {
-    if (err) {
-      console.error("Could not list the directory.", err);
-      process.exit(1);
+  let imageFilenames = await fs.readdir(
+    imageDirectory,
+    (err: Error, files: any) => {
+      if (err) {
+        console.error("Could not list the directory.", err);
+        process.exit(1);
+      }
+      return files;
     }
-    return files;
-  });
-  imageFilenames = imageFilenames.filter((fn) => fn !== ".DS_Store");
+  );
+  imageFilenames = imageFilenames.filter((fn: string) => fn !== ".DS_Store");
 
-  const images = imageFilenames.map((ifn) => {
+  const images = imageFilenames.map((ifn: string) => {
     const dimensions = sizeOf(`${imageDirectory}/${ifn}`);
     return {
       filename: `/${sourceDirName}/${ifn}`,
@@ -31,7 +34,7 @@ async function doIt() {
     `${process.cwd()}/app/${dirName}/images-meta.json`,
     JSON.stringify(images)
   ),
-    (err) => {
+    (err: Error) => {
       if (err) {
         console.error(err);
       }
