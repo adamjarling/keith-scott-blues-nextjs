@@ -94,7 +94,7 @@ export default function Home() {
           </div>
         </Banner>
 
-        <section className="max-w-4xl py-20 mx-3 mx-auto">
+        <section className="max-w-4xl px-3 pt-10 pb-20 mx-auto lg:pt-20">
           <QuoteSlider />
         </section>
 

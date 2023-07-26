@@ -5,10 +5,15 @@ import Main from "@/components/Main";
 import { promises as fs } from "fs";
 import { manifest } from "./manifest";
 import path from "path";
+import { Metadata } from "next";
 
 const sizeOf = require("image-size");
 
 const folder = "photos";
+
+export const metadata: Metadata = {
+  title: "Photos",
+};
 
 const GalleryPage = async () => {
   // Get filenames from a directory

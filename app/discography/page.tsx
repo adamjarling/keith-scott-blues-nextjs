@@ -4,6 +4,11 @@ import Image from "next/image";
 import Main from "@/components/Main";
 import ParallaxHero from "@/components/ParallaxHero";
 import { albums } from "@/data/albums";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Discography",
+};
 
 const Discography = () => {
   return (

@@ -3,6 +3,11 @@ import BannerHeadline from "@/components/banner/Headline";
 import Image from "next/image";
 import Main from "@/components/Main";
 import ParallaxHero from "@/components/ParallaxHero";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+};
 
 const About = () => {
   return (
@@ -52,13 +57,13 @@ const About = () => {
         </p>
 
         <blockquote>
-          &quotHe was very cordial,&quot; Scott says of the elder statesman.
-          &quotThen, I met his whole band and partied with them — guys like Matt
-          Murphy and Lovie Lee, Ray Allison, all those guys. I didn&quot;t think
-          I&quot;d be in a band until I met Muddy Waters and his band. Then I
-          said, &quot;I want to be in a blues band.&quot; They were just so
-          stately and well-dressed, and they took their music so seriously. They
-          seemed like they were gentlemen and they loved what they did.”
+          &quot;He was very cordial,&quot; Scott says of the elder statesman.
+          &quot;Then, I met his whole band and partied with them — guys like
+          Matt Murphy and Lovie Lee, Ray Allison, all those guys. I didn&quot;t
+          think I&quot;d be in a band until I met Muddy Waters and his band.
+          Then I said, &quot;I want to be in a blues band.&quot; They were just
+          so stately and well-dressed, and they took their music so seriously.
+          They seemed like they were gentlemen and they loved what they did.”
         </blockquote>
 
         <p>
@@ -67,7 +72,7 @@ const About = () => {
         </p>
 
         <blockquote>
-          &quotI got to spend some time at Bo Diddley&quot;s house in
+          &quot;I got to spend some time at Bo Diddley&quot;s house in
           Gainesville, Fla. That time, too, my friend was his bass player. Bo
           was awesome, totally the coolest guy. He cooked, he had a barbeque and
           I remember he had a lot of dogs,&quot; Scott says.
@@ -80,7 +85,7 @@ const About = () => {
         </p>
 
         <blockquote>
-          &quotI thought I would learn to play blues, but I didn&quot;t really
+          &quot;I thought I would learn to play blues, but I didn&quot;t really
           think I&quot;d get this proficient at it,&quot; Scott says.
         </blockquote>
 
@@ -91,7 +96,7 @@ const About = () => {
         </p>
 
         <blockquote>
-          &quotMy friend said, &quot;We&quot;ll move to Chicago, put a blues
+          &quot;My friend said, &quot;We&quot;ll move to Chicago, put a blues
           band together, play that scene and meet everybody,&quot; Scott
           recalls.
         </blockquote>
@@ -105,7 +110,7 @@ const About = () => {
         </p>
 
         <blockquote>
-          &quotIt was pretty incredible,&quot; he says. &quotAfter I got there,
+          &quot;It was pretty incredible,&quot; he says. &quotAfter I got there,
           the next thing I know I am at the Checkerboard Lounge and Buddy Guy
           was there, just hanging around. Junior Wells was there and everybody
           was real friendly — and it wasn&quot;t commercialized at all.&quot;
@@ -125,7 +130,7 @@ const About = () => {
         </p>
 
         <blockquote>
-          &quotI played my first gig with Bill Warren, who drummed on Junior
+          &quot;I played my first gig with Bill Warren, who drummed on Junior
           Wells&quot; &quot;Hoodoo Man Blues&quot; album,&quot; Scott recalls.
           &quotHe offered $30 for the gig. At the end of the night he gave each
           guy in the band $5. I said, &quot;Where&quot;s my $30?&quot; He said,
@@ -146,7 +151,7 @@ const About = () => {
         </p>
 
         <blockquote>
-          &quotMy fondest memories of playing with Jimmy are some of the crazy
+          &quot;My fondest memories of playing with Jimmy are some of the crazy
           times in the van at night, driving through Canada and when Robert
           Plant came to watch us play at B.L.U.E.S. That night with Robert Plant
           was a highlight. He hung out with us,&quot; Scott says. For Scott,
@@ -183,7 +188,7 @@ const About = () => {
         </p>
 
         <blockquote>
-          &quotI guess it&quot;s the lifestyle I enjoy,&quot; he says of his
+          &quot;I guess it&quot;s the lifestyle I enjoy,&quot; he says of his
           hectic, itinerant way of living. &quotI get to meet new people, create
           a new progression in my career. I wait for the phone to ring — today
           it did. Whether it&quot;s the House of Blues or a small tavern,

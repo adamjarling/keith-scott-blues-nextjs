@@ -4,30 +4,11 @@ import Image from "next/image";
 import Main from "@/components/Main";
 import ParallaxHero from "@/components/ParallaxHero";
 import TourDatesList from "@/components/TourDatesList";
+import { Metadata } from "next";
 
-const showDates = [
-  {
-    date: "May 15 Wed",
-    venue: "Lyric Theater",
-    time: "8:00pm",
-    location: "Birmingham, AL, United States",
-    rsvp: "RSVP",
-  },
-  {
-    date: "May 15 Wed",
-    venue: "Lyric Theater",
-    time: "8:00pm",
-    location: "Birmingham, AL, United States",
-    rsvp: "RSVP",
-  },
-  {
-    date: "May 15 Wed",
-    venue: "Lyric Theater",
-    time: "8:00pm",
-    location: "Birmingham, AL, United States",
-    rsvp: "RSVP",
-  },
-];
+export const metadata: Metadata = {
+  title: "Shows",
+};
 
 const Shows = () => {
   return (

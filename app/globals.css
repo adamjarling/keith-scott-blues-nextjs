@@ -19,6 +19,10 @@ html {
     @apply pb-3 leading-relaxed;
   }
 
+  blockquote {
+    @apply pb-3 pl-4 italic border-l-4 border-gray-300;
+  }
+
   main a {
     @apply text-green-700 border-b border-green-700 border-dashed;
   }
