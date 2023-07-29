@@ -1,18 +1,39 @@
+import { BsApple, BsSpotify, BsYoutube } from "react-icons/bs";
+
 import Banner from "@/components/banner/Banner";
 import BannerHeadline from "@/components/banner/Headline";
 import Image from "next/image";
 import Main from "@/components/Main";
+import { Metadata } from "next";
 import ParallaxHero from "@/components/ParallaxHero";
 import { albums } from "@/data/albums";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Discography",
 };
 
+function IconWrapper({
+  children,
+  url,
+}: {
+  children: React.ReactNode;
+  url: string;
+}) {
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-3xl border-0"
+    >
+      {children}
+    </a>
+  );
+}
+
 const Discography = () => {
   return (
-    <Main flushTop={true}>
+    <Main flushTop={false}>
       <ParallaxHero
         altText="Some alt text"
         imageUrl={`/images/keith-bw_onutb-cover-bg.png`}
@@ -32,6 +53,23 @@ const Discography = () => {
                 </h3>
                 <div>{album.year}</div>
                 <div>{album.trackCount}</div>
+                <div className="flex items-center w-full space-x-4">
+                  {album.spotifyUrl && (
+                    <IconWrapper url={album.spotifyUrl}>
+                      <BsSpotify />
+                    </IconWrapper>
+                  )}
+                  {album.youTubeMusicUrl && (
+                    <IconWrapper url={album.youTubeMusicUrl}>
+                      <BsYoutube />
+                    </IconWrapper>
+                  )}
+                  {album.appleMusicUrl && (
+                    <IconWrapper url={album.appleMusicUrl}>
+                      <BsApple />
+                    </IconWrapper>
+                  )}
+                </div>
               </div>
             </div>
           ))}

@@ -9,6 +9,7 @@ import useTourDates from "../hooks/use-tour-dates";
 
 const TourDatesList = () => {
   const tourDates = useTourDates();
+  console.log("tourDates", tourDates);
   if (!tourDates) return null;
 
   return (
