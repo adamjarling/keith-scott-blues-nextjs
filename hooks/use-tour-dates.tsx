@@ -6,7 +6,7 @@ function useTourDates() {
   useEffect(() => {
     const fn = async () => {
       const response = await fetch(
-        "https://rest.bandsintown.com/artists/keithscottblues/events?app_id=479f600310e79e4c65edd7b6c286adef"
+        "https://rest.bandsintown.com/artists/keithscottblues/events?app_id=5739cecf1ee2ec8738afae4ed1ffd78d"
       );
       const data = await response.json();
       setDates(data);
