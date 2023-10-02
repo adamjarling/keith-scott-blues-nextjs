@@ -14,6 +14,21 @@ import oneNation from "../public/images/one-nation-under-the-blues_cover-3000px.
 import { useRouter } from "next/navigation";
 import useTourDates from "@/hooks/use-tour-dates";
 
+const listenButtons = [
+  {
+    label: "YouTube Music",
+    url: "https://music.youtube.com/playlist?list=OLAK5uy_mo_JyallZQbert5igvje48SaiSyusk9Sk&si=8Xuq8P8tQ8TGwKBP",
+  },
+  {
+    label: "Spotify",
+    url: "https://open.spotify.com/artist/6sBKh9xJYT905Ps9l2JMZR",
+  },
+  {
+    label: "Apple Music",
+    url: "https://music.apple.com/us/album/one-nation-under-the-blues/1682177226",
+  },
+];
+
 const videos = [
   {
     title: "Sherwood Sessions - Keith Live and Acoustic",
@@ -57,22 +72,40 @@ export default function Home() {
           <Image src={oneNation} alt="Album Cover" className="mb-10" />
           <BannerHeadline>New Album Out Now</BannerHeadline>
           <p className="px-3">
-            Pick up the latest release by Keith Scott and the Electric Blues
+            Listen to the latest release by Keith Scott and the Electric Blues
             Junkies
           </p>
-          <Button
-            classes="mt-6"
-            cb={() =>
-              router.push(
-                "https://open.spotify.com/artist/6sBKh9xJYT905Ps9l2JMZR"
-              )
-            }
-          >
-            Listen Now
-          </Button>
+          <div className="flex flex-col items-center justify-center w-full mt-6 md:flex-row">
+            {listenButtons.map((button) => (
+              <Button
+                key={button.label}
+                classes="md:mr-5 mb-5 md:mb-0"
+                cb={() => router.push(button.url)}
+              >
+                {button.label}
+              </Button>
+            ))}
+          </div>
         </Banner>
 
         <Banner className="text-white bg-black">
+          <div className="container relative mb-10 md:mb-16">
+            <iframe
+              className="w-full aspect-video"
+              src="https://player.vimeo.com/video/715335299?h=abb0300b6f&title=0&byline=0&portrait=0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+
+            <p className="hidden md:block">
+              <a href="https://vimeo.com/715335299">
+                Keith Scott - Lonesome Blues
+              </a>{" "}
+              from{" "}
+              <a href="https://vimeo.com/mediamadegreat">Media Made Great</a> on{" "}
+              <a href="https://vimeo.com">Vimeo</a>.
+            </p>
+          </div>
           <BannerHeadline>Videos</BannerHeadline>
           <div className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2">
             {videos.map((video) => {

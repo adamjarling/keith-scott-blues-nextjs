@@ -34,10 +34,6 @@ function IconWrapper({
 const Discography = () => {
   return (
     <Main flushTop={false}>
-      <ParallaxHero
-        altText="Some alt text"
-        imageUrl={`/images/keith-bw_onutb-cover-bg.png`}
-      />
       <Banner>
         <BannerHeadline>Discography</BannerHeadline>
       </Banner>
