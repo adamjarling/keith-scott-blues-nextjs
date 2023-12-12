@@ -9,8 +9,9 @@ import Main from "@/components/Main";
 import ParallaxHero from "@/components/ParallaxHero";
 import QuoteSlider from "@/components/QuoteSlider";
 import TourDatesMinimal from "@/components/TourDatesMinimal";
+import bannerPhoto from "../public/photos/IMG_20231210_211032_629.jpg";
 import { motion } from "framer-motion";
-import oneNation from "../public/images/one-nation-under-the-blues_cover-3000px.jpg";
+import newAlbum from "../public/images/one-nation-under-the-blues_cover-3000px.jpg";
 import { useRouter } from "next/navigation";
 import useTourDates from "@/hooks/use-tour-dates";
 
@@ -69,7 +70,10 @@ export default function Home() {
     <>
       <Main>
         <Banner>
-          <Image src={oneNation} alt="Album Cover" className="mb-10" />
+          <Image src={bannerPhoto} alt="Keith on stage" className="mb-2" />
+          <p className="mb-10 text-sm text-center text-gray-500">
+            Photo by Debby Sereda
+          </p>
           <BannerHeadline>New Album Out Now</BannerHeadline>
           <p className="px-3">
             Listen to the latest release by Keith Scott and the Electric Blues
@@ -86,6 +90,11 @@ export default function Home() {
               </Button>
             ))}
           </div>
+          <Image
+            src={newAlbum}
+            alt="Keith on stage"
+            className="w-full h-auto max-w-sm mx-auto mt-5 md:max-w-2xl"
+          />
         </Banner>
 
         <Banner className="text-white bg-black">
