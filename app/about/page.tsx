@@ -2,8 +2,8 @@ import Banner from "@/components/banner/Banner";
 import BannerHeadline from "@/components/banner/Headline";
 import Image from "next/image";
 import Main from "@/components/Main";
-import ParallaxHero from "@/components/ParallaxHero";
 import { Metadata } from "next";
+import ParallaxHero from "@/components/ParallaxHero";
 
 export const metadata: Metadata = {
   title: "About",
@@ -122,7 +122,7 @@ const About = () => {
           Side, Scott&quot;s indoctrination into Windy City music progressed at
           lightning speed, with him meeting and playing behind legends such as
           Johnny Littlejohn, B.B. Odom, Eddie Taylor and Little Milton. These
-          older gentlemen, Scott says, taught him the importance of &quotjust
+          older gentlemen, Scott says, taught him the importance of &quot;just
           lying back and being a good accompaniest&quot; while serving as a
           backing musician. He recalls, also, he learned some practical lessons
           about dealing with the unpleasant, rougher edges of the Chicago blues
@@ -132,7 +132,7 @@ const About = () => {
         <blockquote>
           &quot;I played my first gig with Bill Warren, who drummed on Junior
           Wells&quot; &quot;Hoodoo Man Blues&quot; album,&quot; Scott recalls.
-          &quotHe offered $30 for the gig. At the end of the night he gave each
+          &quot;He offered $30 for the gig. At the end of the night he gave each
           guy in the band $5. I said, &quot;Where&quot;s my $30?&quot; He said,
           &quot;I meant it&quot;s $30 for the band!’
         </blockquote>
@@ -165,26 +165,24 @@ const About = () => {
           Scott&quot;s reputation as a reliable, controlled and soulful
           guitar-slinger grew, Scott ventured out on his own, performing a loud
           and funky brand of music he perfected, labeled and plays to this day
-          called &quotheavy blues.&quot;
+          called &quot;heavy blues.&quot;
         </p>
 
         <p>
-          Scott has seven solo CDs to his credit, among these, &quotHeavy
-          Blues,&quot; &quotWorld Blues&quot; and &quotUniversal Blues.&quot;
-          His &quotTennessee Blues,&quot; released in Fall of 2011, has been
-          reviewed favorably by Living Blues, the world&quot;s premier blues
-          magazine. He was also reunited onstage with Dawkins at the 2010
-          Chicago Blues Festival in front of a crowd of thousands.
+          Scott is working on his tenth solo album, among these, One Nation
+          Under The Blues (latest), &quotHeavy Blues,&quot; &quotWorld
+          Blues&quot; and &quotUniversal Blues.&quot; His &quotTennessee
+          Blues,&quot; released in Fall of 2011, has been reviewed favorably by
+          Living Blues, the world&quot;s premier blues magazine. He was also
+          reunited onstage with Dawkins at the 2010 Chicago Blues Festival in
+          front of a crowd of thousands.
         </p>
 
         <p>
-          Scott maintains an ambitious touring schedule in 2012 that has him
-          driving hundreds of miles a week to perform as an acoustic, solo
-          artist throughout Michigan, Illinois and Wisconsin. He frequently
-          makes treks to play clubs in the Pacific Northwest and Montana, while
-          spending time in the summer working festivals with his electric band.
-          Scott is also a favorite on college campuses and on Chicago&quot;s
-          popular WXRT radio.
+          Keith maintains an ambitious touring schedule in 2024 with a return to
+          Australia and Canada as well as a future tour of Great Britain and the
+          Pacific Northwest Scott is also a favorite on college campuses and on
+          Chicago&quot;s popular WXRT radio.
         </p>
 
         <blockquote>

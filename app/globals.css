@@ -20,7 +20,7 @@ html {
   }
 
   blockquote {
-    @apply pb-3 pl-4 italic border-l-4 border-gray-300;
+    @apply pb-3 pl-4 mt-2 mb-5 text-lg italic tracking-wider text-gray-600 border-l-4 border-gray-300;
   }
 
   main a {
