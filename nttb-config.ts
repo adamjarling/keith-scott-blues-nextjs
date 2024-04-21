@@ -47,6 +47,10 @@ const nav = [
     href: "/art",
     label: "Art",
   },
+  {
+    href: "/news",
+    label: "Latest News",
+  },
 ];
 
 const socialMedia = {
