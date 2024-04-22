@@ -32,11 +32,11 @@ const NewsPage = async () => {
       <Banner>
         <BannerHeadline>Latest News</BannerHeadline>
       </Banner>
-      <p className="pb-5 text-center">
-        Having a ball ya'll cruising around the world playing blues and fishing.
-      </p>
+
       <section className="container">
-        <BlogPosts blogPosts={blogPosts.items} />
+        <div className="max-w-2xl mx-auto">
+          <BlogPosts blogPosts={blogPosts.items} />
+        </div>
       </section>
     </Main>
   );
@@ -50,7 +50,7 @@ function BlogPosts({ blogPosts }) {
   return (
     <>
       {blogPosts.map((post) => (
-        <div className="pb-20 mb-20 text-center border-b">
+        <div key={post.id} className="pb-20 mb-20 text-center border-b">
           <a href={post.url}>
             <h2 className="text-2xl">{post.title}</h2>
           </a>
