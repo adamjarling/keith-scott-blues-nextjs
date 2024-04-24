@@ -61,6 +61,9 @@ const MasonryGallery: React.FC<Props> = ({ images = [], manifest }) => {
         );
       });
 
+  // randomly sort galleryImages
+  galleryImages.sort(() => Math.random() - 0.5);
+
   return (
     <>
       <Masonry

@@ -1,6 +1,6 @@
 export const manifest = {
-  "IMG_4051.jpg": {
-    description: "Keith rocking out on the guitar",
+  "keith-al-dimeola-china-club.jpg": {
+    description: "Keith with legendary Al Dimeola at the China Club",
   },
   "keith_tony_hob.jpg": {
     description: "Keith and Tony Mac",
@@ -13,6 +13,12 @@ export const manifest = {
   },
   "keith-buddy-guy.jpg": {
     description: "Keith with Buddy Guy",
+  },
+  "IMG_4051.jpg": {
+    description: "Keith photo shoot 2018",
+  },
+  "keith-chris-finnen.jpg": {
+    description: "Keith with Australian legend Chris Finnen",
   },
   "keith-charlie-jacobsen.jpg": {
     description: "Keith with Charlie Jacobsen",
@@ -28,6 +34,9 @@ export const manifest = {
   },
   "keith-jimmy-dawkins.jpg": {
     description: "Keith with Jimmy Dawkins",
+  },
+  "keith-adam-arling.jpg": {
+    description: "Keith with Adam Arling",
   },
   "keith-john-mayall.jpg": {
     description: "Keith with John Mayall",
@@ -53,6 +62,9 @@ export const manifest = {
   "keith-pat-martino.jpg": {
     description: "Keith with Pat Martino",
   },
+  "keith-sol-snyder-from-morrisey.jpg": {
+    description: "Keith with Sol Snyder from Morrisey",
+  },
   "keith-puno-palladin.jpg": {
     description: "Keith with Puno Palladin",
   },
@@ -62,7 +74,7 @@ export const manifest = {
   "keith-robert-plant.jpg": {
     description: "Keith with Robert Plant",
   },
-  "keith-sol-snyder-from-morrisey.jpg": {
-    description: "Keith with Sol Snyder from Morrisey",
+  "keith-sol-snyder.jpg": {
+    description: "Keith with Sol Snyder",
   },
 };
