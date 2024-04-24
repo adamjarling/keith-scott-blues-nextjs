@@ -81,8 +81,10 @@ const Nav: React.FC<NavProps> = ({ links }) => {
                 isMobileNavOpen && "hidden"
               }`}
             >
-              <span className="hidden lg:block">Keith Scott Blues</span>
-              <span className="lg:hidden">Keith Scott Blues</span>
+              <span className="hidden lg:block font-headline">
+                Keith Scott Blues
+              </span>
+              <span className="lg:hidden font-headline">Keith Scott Blues</span>
             </motion.a>
           </div>
           <div className={`hidden lg:flex uppercase opacity-100 z-30`}>

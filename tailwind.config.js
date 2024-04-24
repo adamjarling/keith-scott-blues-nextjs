@@ -15,7 +15,12 @@ module.exports = {
       center: true,
       padding: "2rem",
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-libreFranklin)", ...fontFamily.sans],
+        headline: ["var(--font-rockSalt)", fontFamily.sans],
+      },
+    },
   },
   plugins: [],
 };
