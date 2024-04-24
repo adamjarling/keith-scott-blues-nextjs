@@ -2,10 +2,10 @@ import MasonryGallery, { MasonryImage } from "@/components/Masonry";
 
 import BannerHeadline from "@/components/banner/Headline";
 import Main from "@/components/Main";
+import { Metadata } from "next";
 import { promises as fs } from "fs";
 import { manifest } from "./manifest";
 import path from "path";
-import { Metadata } from "next";
 
 const sizeOf = require("image-size");
 
@@ -35,7 +35,7 @@ const GalleryPage = async () => {
       <section className="max-w-3xl py-8 mx-auto text-center">
         <BannerHeadline>Photos</BannerHeadline>
       </section>
-      {images && <MasonryGallery images={images} />}
+      {images && <MasonryGallery images={images} manifest={manifest} />}
     </Main>
   );
 };

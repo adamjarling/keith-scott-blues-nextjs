@@ -50,15 +50,16 @@ const MasonryGallery: React.FC<Props> = ({ images = [], manifest }) => {
   const breakpointColumnsObj = {
     default: 3,
     1100: 2,
+    640: 1,
   };
 
   const galleryImages = !manifest
     ? images
-    : images.filter((i) =>
-        manifest.hasOwnProperty(
+    : images.filter((i) => {
+        return manifest.hasOwnProperty(
           i.filename.slice(i.filename.lastIndexOf("/") + 1)
-        )
-      );
+        );
+      });
 
   return (
     <>
@@ -82,6 +83,9 @@ const MasonryGallery: React.FC<Props> = ({ images = [], manifest }) => {
               alt={"alt"}
               className="cursor-pointer"
             />
+            <p className="pt-2 font-light tracking-wider text-center">
+              {getInfo(image.filename, manifest)?.description || ""}
+            </p>
           </motion.div>
         ))}
       </Masonry>
