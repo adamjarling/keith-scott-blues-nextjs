@@ -45,9 +45,9 @@ const QuoteSlider = () => {
       showThumbs={false}
     >
       {quotes.map(({ description, author, caption }) => (
-        <blockquote key={caption} className="text-2xl italic">
+        <blockquote key={caption} className="text-2xl italic font-headline">
           {description}
-          <cite className="block pt-3 not-italic text-gray-600">
+          <cite className="block pt-3 font-sans not-italic text-gray-600">
             {author} - {caption}
           </cite>
         </blockquote>

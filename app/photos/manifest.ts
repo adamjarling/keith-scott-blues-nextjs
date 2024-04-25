@@ -66,7 +66,7 @@ export const manifest = {
     description: "Keith with Sol Snyder from Morrisey",
   },
   "keith-puno-palladin.jpg": {
-    description: "Keith with Puno Palladin",
+    description: "Keith with Pino Palladin",
   },
   "keith-rev-jones.jpg": {
     description: "Keith with Rev Jones",

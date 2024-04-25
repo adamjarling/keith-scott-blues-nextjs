@@ -16,9 +16,19 @@ module.exports = {
       padding: "2rem",
     },
     extend: {
+      animation: {
+        snapIn: "snapIn 600ms ease-out",
+      },
       fontFamily: {
         sans: ["var(--font-libreFranklin)", ...fontFamily.sans],
         headline: ["var(--font-rockSalt)", fontFamily.sans],
+      },
+      keyframes: {
+        snapIn: {
+          "0%": { transform: "translateY(-20px)" },
+          "80%": { transform: "translateY(10px)" },
+          "100%": { transform: "translateY(0)" },
+        },
       },
     },
   },

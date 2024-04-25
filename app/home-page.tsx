@@ -69,11 +69,13 @@ export default function Home() {
   return (
     <>
       <Main>
-        <Banner>
+        <div className="animate-snapIn">
           <Image src={bannerPhoto} alt="Keith on stage" className="mb-2" />
           <p className="mb-10 text-sm text-center text-gray-500">
             Photo by Debby Sereda
           </p>
+        </div>
+        <Banner>
           <BannerHeadline>New Album Out Now</BannerHeadline>
           <p className="px-3">
             Listen to the latest release by Keith Scott and the Electric Blues
