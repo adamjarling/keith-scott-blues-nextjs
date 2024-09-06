@@ -77,4 +77,7 @@ export const manifest = {
   "keith-sol-snyder.jpg": {
     description: "Keith with Sol Snyder",
   },
+  "keith_buddy_miles.jpg": {
+    description: "Keith with Buddy Miles and Larry McCray",
+  },
 };

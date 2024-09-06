@@ -75,6 +75,26 @@ export default function Home() {
             Photo by Debby Sereda
           </p>
         </div>
+
+        <section className="container max-w-screen-lg mb-10">
+          <p>
+            From humble beginnings to worldwide recognition, Keith Scott's
+            journey as a blues and rock guitarist is nothing short of
+            extraordinary. With his parents' support and Muddy Waters'
+            inspiration, Scott honed his skills and confidence, eventually
+            catching the attention of blues legends like Hip Linkchain and Jimmy
+            Dawkins.
+          </p>{" "}
+          <p>
+            As he toured the globe, Scott's unique style and soulful sound
+            gained momentum, paving the way for his solo career and the
+            development of his signature 'heavy blues' style. With a discography
+            spanning decades and a tireless work ethic, Scott continues to leave
+            his mark on the music industry, entertaining audiences everywhere he
+            goes.
+          </p>
+        </section>
+
         <Banner>
           <BannerHeadline>New Album Out Now</BannerHeadline>
           <p className="px-3">
