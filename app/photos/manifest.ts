@@ -80,4 +80,7 @@ export const manifest = {
   "keith_buddy_miles.jpg": {
     description: "Keith with Buddy Miles and Larry McCray",
   },
+  "keith_darryl_jones.jpg": {
+    description: "Keith with Darryl Jones",
+  },
 };
