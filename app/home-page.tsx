@@ -6,14 +6,13 @@ import Button from "@/components/Button";
 import Image from "next/image";
 import Link from "next/link";
 import Main from "@/components/Main";
-import ParallaxHero from "@/components/ParallaxHero";
 import QuoteSlider from "@/components/QuoteSlider";
 import TourDatesMinimal from "@/components/TourDatesMinimal";
 import bannerPhoto from "../public/photos/IMG_20231210_211032_629.jpg";
-import { motion } from "framer-motion";
 import newAlbum from "../public/images/album-state-street-blues.png";
 import { useRouter } from "next/navigation";
 import useTourDates from "@/hooks/use-tour-dates";
+import bluesMattersCover from "../public/images/2025-blues-matters-cover.jpeg";
 
 const listenButtons = [
   {
@@ -117,6 +116,30 @@ export default function Home() {
             alt="Keith on stage"
             className="w-full h-auto max-w-sm mx-auto mt-5 border-4 border-black shadow-lg md:max-w-2xl"
           />
+          <div className="pt-10">
+            <p>
+              As featured in the December 2025 issue of{" "}
+              <a
+                href="https://www.facebook.com/bluesmattersmagazine"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Blues Matters Magazine
+              </a>{" "}
+              UK!
+            </p>
+            <a
+              href="https://www.facebook.com/bluesmattersmagazine"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={bluesMattersCover}
+                alt="Keith on stage"
+                className="w-full h-auto max-w-sm mx-auto mt-5 border-4 border-black shadow-lg md:max-w-3xl"
+              />
+            </a>
+          </div>
         </Banner>
 
         <Banner className="text-white bg-black">
