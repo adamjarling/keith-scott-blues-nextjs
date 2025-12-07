@@ -11,22 +11,22 @@ import QuoteSlider from "@/components/QuoteSlider";
 import TourDatesMinimal from "@/components/TourDatesMinimal";
 import bannerPhoto from "../public/photos/IMG_20231210_211032_629.jpg";
 import { motion } from "framer-motion";
-import newAlbum from "../public/images/one-nation-under-the-blues_cover-3000px.jpg";
+import newAlbum from "../public/images/album-state-street-blues.png";
 import { useRouter } from "next/navigation";
 import useTourDates from "@/hooks/use-tour-dates";
 
 const listenButtons = [
   {
     label: "YouTube Music",
-    url: "https://music.youtube.com/playlist?list=OLAK5uy_mo_JyallZQbert5igvje48SaiSyusk9Sk&si=8Xuq8P8tQ8TGwKBP",
+    url: "https://music.youtube.com/playlist?list=OLAK5uy_l2vD6sPLtKYd28k0jA_auFf5YClfFaoRU&si=CCBNmPHJs-tazTQ0",
   },
   {
     label: "Spotify",
-    url: "https://open.spotify.com/artist/6sBKh9xJYT905Ps9l2JMZR",
+    url: "https://open.spotify.com/album/5thBaF0Bmmr93GADooXjgj?si=y9OcVKq-TLWUQ7OYktvT_w",
   },
   {
     label: "Apple Music",
-    url: "https://music.apple.com/us/album/one-nation-under-the-blues/1682177226",
+    url: "https://music.apple.com/us/album/back-to-state-street/1825256377",
   },
 ];
 
@@ -115,7 +115,7 @@ export default function Home() {
           <Image
             src={newAlbum}
             alt="Keith on stage"
-            className="w-full h-auto max-w-sm mx-auto mt-5 md:max-w-2xl"
+            className="w-full h-auto max-w-sm mx-auto mt-5 border-4 border-black shadow-lg md:max-w-2xl"
           />
         </Banner>
 

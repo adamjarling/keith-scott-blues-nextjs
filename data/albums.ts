@@ -2,6 +2,7 @@ import betterWorld from "../public/images/album-better-world-out-there.jpg";
 import flatCreek from "../public/images/album-flat-creek-blues.jpg";
 import heavyBlues from "../public/images/album-heavy-blues.jpg";
 import oneNation from "../public/images/one-nation-under-the-blues_cover-3000px.jpg";
+import stateStreetBlues from "../public/images/album-state-street-blues.png";
 import stellaBlues from "../public/images/album-stella-blues.jpg";
 import tennesseeBlues from "../public/images/album-tennessee-blues.jpg";
 import universalBlues from "../public/images/album-universal-blues.jpg";
@@ -20,6 +21,19 @@ export type Album = {
 };
 
 export const albums: Album[] = [
+  {
+    url: "",
+    imgSrc: stateStreetBlues,
+    title: "Back to State Street",
+    year: "2025",
+    trackCount: "9 tracks",
+    spotifyUrl:
+      "https://open.spotify.com/album/5thBaF0Bmmr93GADooXjgj?si=y9OcVKq-TLWUQ7OYktvT_w",
+    appleMusicUrl:
+      "https://music.apple.com/us/album/back-to-state-street/1825256377",
+    youTubeMusicUrl:
+      "https://music.youtube.com/playlist?list=OLAK5uy_l2vD6sPLtKYd28k0jA_auFf5YClfFaoRU&si=CCBNmPHJs-tazTQ0",
+  },
   {
     url: "",
     imgSrc: oneNation,
