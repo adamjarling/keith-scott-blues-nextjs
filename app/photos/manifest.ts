@@ -83,4 +83,7 @@ export const manifest = {
   "keith_darryl_jones.jpg": {
     description: "Keith with Darryl Jones",
   },
+  "keith_in_japan_2025.jpg": {
+    description: "Keith in Japan 2025 with Mr. Oh Yea",
+  },
 };
