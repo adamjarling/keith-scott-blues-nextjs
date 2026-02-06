@@ -35,6 +35,10 @@ const listenButtons = [
 
 const videos = [
   {
+    title: "Keith Scott - Lonesome Blues",
+    src: "https://player.vimeo.com/video/715335299?h=abb0300b6f&title=0&byline=0&portrait=0",
+  },
+  {
     title: "Sherwood Sessions - Keith Live and Acoustic",
     src: "https://www.youtube.com/embed/OIOip4ld5w4",
   },
@@ -149,18 +153,14 @@ export default function Home({ tourDates }: HomePageProps) {
           <div className="container relative mb-10 md:mb-16">
             <iframe
               className="w-full aspect-video"
-              src="https://player.vimeo.com/video/715335299?h=abb0300b6f&title=0&byline=0&portrait=0"
-              allow="autoplay; fullscreen; picture-in-picture"
+              src="https://www.youtube.com/embed/7JBywDEfLAU"
+              title="Keith Scott (Live in Terrace, British Columbia) 2025"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
 
             <p className="hidden md:block">
-              <a href="https://vimeo.com/715335299">
-                Keith Scott - Lonesome Blues
-              </a>{" "}
-              from{" "}
-              <a href="https://vimeo.com/mediamadegreat">Media Made Great</a> on{" "}
-              <a href="https://vimeo.com">Vimeo</a>.
+              Keith Scott (Live in Terrace, British Columbia) 2025
             </p>
           </div>
           <BannerHeadline>Videos</BannerHeadline>
