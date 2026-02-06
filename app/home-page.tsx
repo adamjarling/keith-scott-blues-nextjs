@@ -11,8 +11,12 @@ import TourDatesMinimal from "@/components/TourDatesMinimal";
 import bannerPhoto from "../public/photos/IMG_20231210_211032_629.jpg";
 import newAlbum from "../public/images/album-state-street-blues.png";
 import { useRouter } from "next/navigation";
-import useTourDates from "@/hooks/use-tour-dates";
+import { TourDate } from "@/lib/tour-dates";
 import bluesMattersCover from "../public/images/2025-blues-matters-cover.jpeg";
+
+interface HomePageProps {
+  tourDates: TourDate[];
+}
 
 const listenButtons = [
   {
@@ -61,8 +65,7 @@ const bluesSocieties = [
   },
 ];
 
-export default function Home() {
-  const tourDates = useTourDates();
+export default function Home({ tourDates }: HomePageProps) {
   const router = useRouter();
 
   return (
