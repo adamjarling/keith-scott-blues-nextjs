@@ -1,29 +1,41 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 interface BannerHeadlineProps {
   children: React.ReactNode;
 }
 
-const BannerHeadline: React.FC<BannerHeadlineProps> = ({ children }) => {
+export default function BannerHeadline({ children }: BannerHeadlineProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <motion.h2
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 0.5,
-      }}
-      className="banner-headline"
+    <h2
+      ref={ref}
+      className={`banner-headline transition-opacity duration-500 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
     >
       {children}
-    </motion.h2>
+    </h2>
   );
-};
-
-export default BannerHeadline;
+}

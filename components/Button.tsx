@@ -1,32 +1,21 @@
-import React from "react";
-import { motion } from "framer-motion";
-
-interface Props {
+interface ButtonProps {
   children: React.ReactNode;
   cb: () => void;
   size?: "sm";
   classes?: string;
 }
 
-const Button: React.FC<Props> = ({ children, cb, size, classes }) => {
+export default function Button({ children, cb, size, classes }: ButtonProps) {
   return (
-    <motion.button
-      whileHover={{
-        backgroundColor: "#efefef",
-        transition: {
-          duration: 0.5,
-        },
-      }}
+    <button
       className={`py-5 ${
-        size && size === "sm" ? "text-sm" : "text-xl"
-      } font-medium uppercase bg-white px-7 border-2 shadow border-black ${
-        classes ? classes : ""
+        size === "sm" ? "text-sm" : "text-xl"
+      } font-medium uppercase bg-white px-7 border-2 shadow border-black transition-colors duration-300 hover:bg-gray-100 ${
+        classes ?? ""
       }`}
       onClick={cb}
     >
       {children}
-    </motion.button>
+    </button>
   );
-};
-
-export default Button;
+}

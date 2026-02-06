@@ -1,10 +1,9 @@
 "use client";
 
-import { FiMenu, FiX } from "react-icons/fi";
-import React, { useEffect, useState } from "react";
-import { motion, useScroll } from "framer-motion";
-
+import { FiX } from "react-icons/fi";
+import { useEffect, useState } from "react";
 import { IoIosMenu } from "react-icons/io";
+import Link from "next/link";
 import SocialMediaIcons from "./SocialMediaIcons";
 import { usePathname } from "next/navigation";
 
@@ -15,104 +14,69 @@ interface NavProps {
   }[];
 }
 
-const Nav: React.FC<NavProps> = ({ links }) => {
+export default function Nav({ links }: NavProps) {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-  const { scrollYProgress } = useScroll();
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
-  const textVariants = {
-    start: {
-      color: ["/about"].includes(pathname || "") ? "white" : "black",
-    },
-    end: {
-      color: "white",
-    },
-  };
+  const isLightPage = ["/about"].includes(pathname || "");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Check initial state
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMobileNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
   };
-  const [opacity, setOpacity] = useState(0);
 
-  useEffect(() => {
-    scrollYProgress.on("change", (v) => {
-      setOpacity(Math.ceil(v));
-    });
-  }, [scrollYProgress]);
-
-  const navVariants = {
-    open: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.2,
-      },
-    },
-    closed: {
-      x: "100%",
-      opacity: 0,
-    },
-  };
+  const textColor = isScrolled || isMobileNavOpen ? "text-white" : isLightPage ? "text-white" : "text-black";
 
   return (
     <div className="fixed top-0 z-20 w-full">
       <div className="container">
-        <motion.div
-          className="absolute inset-0 bg-black"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: opacity - 0.1 }}
-          transition={{
-            duration: 0.5,
-          }}
-        ></motion.div>
-        <nav
-          className={`flex justify-between items-center py-3 lg:py-5 shadow-sm w-full`}
-        >
-          {/* Desktop nav */}
-          <div className={`flex items-center opacity-100 z-30`}>
-            <motion.a
-              variants={textVariants}
-              animate={opacity > 0 ? "end" : "start"}
-              transition={{
-                duration: 0.5,
-              }}
+        <div
+          className={`absolute inset-0 bg-black transition-opacity duration-500 ${
+            isScrolled ? "opacity-90" : "opacity-0"
+          }`}
+        />
+        <nav className="relative flex justify-between items-center py-3 lg:py-5 shadow-sm w-full">
+          {/* Logo */}
+          <div className="flex items-center z-30">
+            <Link
               href="/"
-              className={`text-lg font-semibold uppercase ${
-                isMobileNavOpen && "hidden"
+              className={`text-lg font-semibold uppercase transition-colors duration-300 ${textColor} ${
+                isMobileNavOpen ? "hidden" : ""
               }`}
             >
-              <span className="hidden lg:block font-headline">
-                Keith Scott Blues
-              </span>
-              <span className="lg:hidden font-headline">Keith Scott Blues</span>
-            </motion.a>
+              <span className="font-headline">Keith Scott Blues</span>
+            </Link>
           </div>
-          <div className={`hidden lg:flex uppercase opacity-100 z-30`}>
+
+          {/* Desktop nav */}
+          <div className="hidden lg:flex uppercase z-30">
             {links.map((link) => (
-              <motion.a
-                variants={textVariants}
-                animate={opacity > 0 ? "end" : "start"}
-                transition={{
-                  duration: 0.5,
-                }}
+              <Link
                 key={link.label}
                 href={link.href}
-                className={`mx-4 text-sm`}
+                className={`mx-4 text-sm transition-colors duration-300 ${textColor}`}
               >
                 {link.label}
-              </motion.a>
+              </Link>
             ))}
           </div>
+
           {/* Mobile menu button */}
-          <div className={`lg:hidden flex items-center z-20`}>
-            <motion.button
-              variants={textVariants}
-              animate={opacity > 0 ? "end" : "start"}
-              transition={{
-                duration: 0.5,
-              }}
+          <div className="lg:hidden flex items-center z-30">
+            <button
               type="button"
-              className={`focus:outline-none`}
+              className={`focus:outline-none transition-colors duration-300 ${textColor}`}
               onClick={toggleMobileNav}
             >
               {isMobileNavOpen ? (
@@ -120,36 +84,35 @@ const Nav: React.FC<NavProps> = ({ links }) => {
               ) : (
                 <IoIosMenu size={40} />
               )}
-            </motion.button>
+            </button>
           </div>
-          {isMobileNavOpen && (
-            <motion.div
-              className={`lg:hidden fixed inset-0 bg-black z-10 h-screen`}
-              initial="closed"
-              animate="open"
-              variants={navVariants}
-            >
-              <div className="container mt-20">
-                {links.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className={`block text-3xl py-2 text-white hover:text-gray-200`}
-                    onClick={toggleMobileNav}
-                  >
-                    {link.label}
-                  </a>
-                ))}
-                <div className="mt-20">
-                  <SocialMediaIcons />
-                </div>
+
+          {/* Mobile nav overlay */}
+          <div
+            className={`lg:hidden fixed inset-0 bg-black z-10 h-screen transition-all duration-300 ${
+              isMobileNavOpen
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 translate-x-full pointer-events-none"
+            }`}
+          >
+            <div className="container mt-20">
+              {links.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="block text-3xl py-2 text-white hover:text-gray-200"
+                  onClick={toggleMobileNav}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="mt-20">
+                <SocialMediaIcons />
               </div>
-            </motion.div>
-          )}
+            </div>
+          </div>
         </nav>
       </div>
     </div>
   );
-};
-
-export default Nav;
+}

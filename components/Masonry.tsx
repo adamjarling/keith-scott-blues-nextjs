@@ -3,14 +3,10 @@
 import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/styles.css";
 
-import React, { useState } from "react";
-
+import { useState } from "react";
 import Captions from "yet-another-react-lightbox/plugins/captions";
 import Image from "next/image";
 import Lightbox from "yet-another-react-lightbox";
-import Masonry from "react-masonry-css";
-import { motion } from "framer-motion";
-import styles from "@/app/page.module.css";
 
 export type MasonryImage = {
   filename: string;
@@ -20,90 +16,80 @@ export type MasonryImage = {
   type: string;
 };
 
+interface MasonryManifest {
+  [key: string]: {
+    title?: string;
+    description?: string;
+  };
+}
+
 interface Props {
   images: MasonryImage[];
-  manifest?: {
-    [key: string]: {
-      title?: string;
-      description?: string;
-    };
-  };
+  manifest?: MasonryManifest;
 }
 
-function getInfo(src: string, manifest: any) {
-  if (!src || !manifest) return "";
+function getInfo(src: string, manifest?: MasonryManifest) {
+  if (!src || !manifest) return null;
   const arr = src.split("/");
-  const fileName = src.split("/")[arr.length - 1];
-
-  const info = manifest[fileName];
-
-  return info || "";
+  const fileName = arr[arr.length - 1];
+  return manifest[fileName] ?? null;
 }
 
-const MasonryGallery: React.FC<Props> = ({ images = [], manifest }) => {
+export default function MasonryGallery({ images = [], manifest }: Props) {
   const [photoIndex, setPhotoIndex] = useState(-1);
-
-  const handleImageClick = (index: number) => {
-    setPhotoIndex(index);
-  };
-
-  const breakpointColumnsObj = {
-    default: 3,
-    1100: 2,
-    640: 1,
-  };
 
   const galleryImages = !manifest
     ? images
     : images.filter((i) => {
-        return manifest.hasOwnProperty(
-          i.filename.slice(i.filename.lastIndexOf("/") + 1)
-        );
+        const fileName = i.filename.slice(i.filename.lastIndexOf("/") + 1);
+        return manifest.hasOwnProperty(fileName);
       });
 
-  // randomly sort galleryImages
-  galleryImages.sort(() => Math.random() - 0.5);
+  // Randomly sort galleryImages (stable across renders with useMemo if needed)
+  const sortedImages = [...galleryImages].sort(() => Math.random() - 0.5);
 
   return (
     <>
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className={styles["my-masonry-grid"]}
-        columnClassName={styles["my-masonry-grid_column"]}
-      >
-        {galleryImages.map((image, index) => (
-          <motion.div
-            key={image.filename}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <Image
-              src={image.filename}
-              width={image.width}
-              height={image.height}
-              onClick={() => handleImageClick(index)}
-              alt={"alt"}
-              className="cursor-pointer"
-            />
-            <p className="pt-2 font-light tracking-wider text-center">
-              {getInfo(image.filename, manifest)?.description || ""}
-            </p>
-          </motion.div>
-        ))}
-      </Masonry>
+      <div className="columns-1 sm:columns-2 lg:columns-3 gap-5">
+        {sortedImages.map((image, index) => {
+          const info = getInfo(image.filename, manifest);
+          return (
+            <div
+              key={image.filename}
+              className="mb-5 break-inside-avoid transition-transform duration-300 hover:scale-[1.02]"
+            >
+              <Image
+                src={image.filename}
+                width={image.width}
+                height={image.height}
+                onClick={() => setPhotoIndex(index)}
+                alt={info?.description ?? "Gallery image"}
+                className="cursor-pointer w-full h-auto"
+              />
+              {info?.description && (
+                <p className="pt-2 font-light tracking-wider text-center">
+                  {info.description}
+                </p>
+              )}
+            </div>
+          );
+        })}
+      </div>
       <Lightbox
         open={photoIndex >= 0}
         index={photoIndex}
         close={() => setPhotoIndex(-1)}
-        slides={galleryImages.map((i) => ({
-          src: i.filename,
-          key: i.filename,
-          width: i.width,
-          height: i.height,
-          title: getInfo(i.filename, manifest)?.title || "",
-          description: getInfo(i.filename, manifest)?.description || "",
-        }))}
+        slides={sortedImages.map((i) => {
+          const info = getInfo(i.filename, manifest);
+          return {
+            src: i.filename,
+            key: i.filename,
+            width: i.width,
+            height: i.height,
+            title: info?.title ?? "",
+            description: info?.description ?? "",
+          };
+        })}
         plugins={[Captions]}
         captions={{
           descriptionTextAlign: "center",
@@ -111,6 +97,4 @@ const MasonryGallery: React.FC<Props> = ({ images = [], manifest }) => {
       />
     </>
   );
-};
-
-export default MasonryGallery;
+}
