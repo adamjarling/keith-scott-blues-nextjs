@@ -68,7 +68,7 @@ export default function Home() {
   return (
     <>
       <Main>
-        <div className="animate-snapIn">
+        <div className="animate-snap-in">
           <Image src={bannerPhoto} alt="Keith on stage" className="mb-2" />
           <p className="mb-10 text-sm text-center text-gray-500">
             Photo by Debby Sereda
@@ -77,17 +77,17 @@ export default function Home() {
 
         <section className="container max-w-screen-lg mb-10">
           <p>
-            From humble beginnings to worldwide recognition, Keith Scott's
+            From humble beginnings to worldwide recognition, Keith Scott&apos;s
             journey as a blues and rock guitarist is nothing short of
-            extraordinary. With his parents' support and Muddy Waters'
+            extraordinary. With his parents&apos; support and Muddy Waters&apos;
             inspiration, Scott honed his skills and confidence, eventually
             catching the attention of blues legends like Hip Linkchain and Jimmy
             Dawkins.
           </p>{" "}
           <p>
-            As he toured the globe, Scott's unique style and soulful sound
+            As he toured the globe, Scott&apos;s unique style and soulful sound
             gained momentum, paving the way for his solo career and the
-            development of his signature 'heavy blues' style. With a discography
+            development of his signature &apos;heavy blues&apos; style. With a discography
             spanning decades and a tireless work ethic, Scott continues to leave
             his mark on the music industry, entertaining audiences everywhere he
             goes.

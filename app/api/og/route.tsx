@@ -1,11 +1,9 @@
-import { ImageResponse } from "@vercel/og";
+import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
 
-export const config = {
-  runtime: "edge",
-};
+export const runtime = "edge";
 
-export default function (req: NextRequest) {
+export function GET(req: NextRequest) {
   const { searchParams, host, protocol } = new URL(req.url);
 
   const cover = `${protocol}//${host}/_next/image?url=${encodeURIComponent(
@@ -15,6 +13,7 @@ export default function (req: NextRequest) {
   return new ImageResponse(
     (
       <div tw="flex w-full h-full flex-col justify-end bg-slate-200 items-stretch">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={cover}
           alt=""

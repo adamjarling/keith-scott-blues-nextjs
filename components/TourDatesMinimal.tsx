@@ -1,5 +1,12 @@
 import React from "react";
-import moment from "moment";
+
+function formatDate(datetime: string): string {
+  return new Date(datetime).toLocaleDateString("en-US", {
+    month: "short",
+    day: "2-digit",
+    year: "numeric",
+  });
+}
 
 const TourDates = ({ tourDates }: { tourDates: any }) => {
   return (
@@ -8,7 +15,7 @@ const TourDates = ({ tourDates }: { tourDates: any }) => {
         return (
           <div className="flex flex-col items-center mb-5" key={td.id}>
             <div className="text-2xl entry-date">
-              {moment(td.datetime).format("MMM DD, YYYY")}
+              {formatDate(td.datetime)}
             </div>
             <div className="text-2xl text-center">
               <a href={td.url} target="_blank" rel="noopener noreferrer">
